@@ -1,0 +1,23 @@
+ASUID : 1213098924
+Name: Edward Yang
+
+makefile:
+ python enables to execute by adding the python environment in the script
+ so the makefile is simply /cp [source] reflector
+
+reflector.py:
+  for the input, using argparse to make sure all the inputs are correct
+  then defining a reflectorcallback() for the sniff function
+  and a secondphasepackage() for altering the package information
+
+  reflectorcallback:
+    by reading elements in the package
+      if ARP:
+        create a arpreply that contains op=2 and target address
+
+      if IP:
+        we look at the dst of the package first, for the first phase
+        which is the request by attacker, we give back the reflector_ip
+        for the second phase, which is the reply of the attacker,
+        we give him the packet of himself by changing the ip to the victim
+        to fool him
