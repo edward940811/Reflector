@@ -1,6 +1,3 @@
-ASUID : 1213098924
-Name: Edward Yang
-
 makefile:
  python enables to execute by adding the python environment in the script
  so the makefile is simply /cp [source] reflector
